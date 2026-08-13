@@ -1,32 +1,33 @@
-# Website Madrasah Diniyah Takmiliyah Wihdatul Muslimat
+# Website Edukasi Madrasah Wihdatul Muslimat
 
 ## Deskripsi Proyek
 
-Proyek ini merupakan website edukasi untuk **Madrasah Diniyah Takmiliyah Wihdatul Muslimat** yang berada di Menteng, Jakarta Pusat. Website dibuat untuk memperkenalkan profil madrasah, kurikulum, wawasan pendidikan agama, kegiatan santri, galeri foto, dan informasi kontak.
+Proyek ini merupakan website edukasi untuk **Madrasah Diniyah Takmiliyah Wihdatul Muslimat** di Menteng, Jakarta Pusat. Website menampilkan profil madrasah, kurikulum, wawasan edukasi, media pembelajaran, kegiatan, galeri, dan informasi kontak.
 
-Website ini termasuk jenis **single-page website**, yaitu seluruh isi utama berada dalam satu halaman `index.html`. Ketika menu navigasi diklik, halaman akan bergulir menuju bagian yang dipilih tanpa membuka halaman HTML baru.
+Website dibuat untuk memenuhi tugas UAS mata kuliah **Pemrograman Web I**. Komponennya disusun berdasarkan materi Pertemuan 1 sampai Pertemuan 15, seperti struktur HTML, paragraf, heading, text formatting, link, gambar, tabel, list, form, elemen semantik, video, audio, CSS, dan JavaScript.
 
-## Tujuan Pembuatan Website
+Website ini termasuk **single-page website** karena seluruh konten utama berada dalam satu file `index.html`. Ketika menu dipilih, halaman akan bergulir menuju bagian yang mempunyai `id` sesuai dengan tujuan link.
 
-Tujuan dari pembuatan website ini adalah:
+## Tujuan Proyek
 
 1. Menyediakan informasi mengenai Madrasah Wihdatul Muslimat.
-2. Menampilkan mata pelajaran yang diajarkan di madrasah.
-3. Memberikan wawasan tentang pentingnya pendidikan agama bagi anak.
-4. Menampilkan kegiatan dan dokumentasi madrasah.
-5. Memudahkan pengunjung melihat alamat dan kontak madrasah.
-6. Menerapkan dasar-dasar HTML, CSS, dan JavaScript dalam sebuah proyek website.
+2. Menampilkan kurikulum dan kegiatan pembelajaran madrasah.
+3. Memberikan wawasan mengenai pentingnya pendidikan agama bagi anak.
+4. Menampilkan dokumentasi kegiatan santri.
+5. Menerapkan materi HTML, CSS, dan JavaScript dalam satu proyek.
+6. Membuat tampilan yang dapat digunakan pada komputer, tablet, dan ponsel.
 
 ## Teknologi yang Digunakan
 
 | Teknologi | Fungsi |
 | --- | --- |
-| HTML5 | Membuat struktur dan isi halaman website. |
-| CSS3 | Mengatur warna, ukuran, posisi, animasi, dan tampilan responsif. |
-| JavaScript | Memberikan fungsi interaktif pada menu, galeri, form, dan tombol kembali ke atas. |
+| HTML5 | Membuat struktur dan isi website. |
+| CSS3 | Mengatur warna, ukuran, posisi, efek, dan tampilan responsif. |
+| JavaScript | Membuat menu, filter galeri, form demo, dan tombol kembali ke atas menjadi interaktif. |
 | Google Fonts | Menyediakan font `DM Sans` dan `Playfair Display`. |
+| YouTube Embed | Menampilkan video pembelajaran dari YouTube. |
 
-Proyek ini menggunakan **JavaScript murni atau Vanilla JavaScript**, sehingga tidak memakai framework seperti Bootstrap, React, atau Vue.
+Proyek menggunakan **Custom CSS** dan **Vanilla JavaScript**, sehingga tidak menggunakan Bootstrap, Tailwind CSS, React, atau framework lainnya.
 
 ## Struktur File
 
@@ -39,572 +40,631 @@ Proyek ini menggunakan **JavaScript murni atau Vanilla JavaScript**, sehingga ti
 └── assets/
     ├── logo-madrasah.jpg
     ├── identitas.jpg
-    ├── kegiatan-1.jpeg
-    ├── kegiatan-2.jpeg
-    ├── kegiatan-4.jpeg
-    ├── kegiatan-5.jpeg
-    ├── kegiatan-6.jpeg
-    ├── kegiatan-7.jpeg
-    ├── kegiatan-8.jpeg
-    ├── kegiatan-9.jpeg
-    ├── kegiatan-10.jpeg
-    ├── kegiatan-11.jpeg
-    ├── kegiatan-12.jpeg
-    ├── kegiatan-13.jpeg
-    ├── kegiatan-14.jpeg
-    ├── kegiatan-15.jpeg
-    ├── kegiatan-16.jpeg
-    └── kegiatan-17.jpeg
+    └── kegiatan-1.jpeg sampai kegiatan-17.jpeg
 ```
 
 Keterangan:
 
-- `index.html` berisi kerangka dan semua isi website.
-- `style.css` berisi aturan tampilan website.
+- `index.html` berisi seluruh struktur dan konten website.
+- `style.css` berisi seluruh aturan desain dan tampilan responsif.
 - `script.js` berisi fungsi interaktif website.
-- Folder `assets` menyimpan logo dan foto yang dipakai oleh website.
-- `README.md` berisi dokumentasi dan penjelasan proyek.
+- Folder `assets` menyimpan logo dan gambar kegiatan madrasah.
+- `README.md` berisi dokumentasi dan penjelasan source code.
 
-## Cara Menjalankan Website
+## Hubungan Antarfile
 
-1. Pastikan `index.html`, `style.css`, dan `script.js` berada dalam folder yang sama.
-2. Pastikan semua gambar berada di dalam folder `assets`.
-3. Buka file `index.html` menggunakan browser.
-4. Agar lebih mudah saat mengembangkan website, proyek juga dapat dibuka melalui ekstensi **Live Server** di Visual Studio Code.
-
-Contoh susunan alamat file yang benar:
-
-```text
-nama-folder/index.html
-nama-folder/style.css
-nama-folder/script.js
-nama-folder/assets/logo-madrasah.jpg
-```
-
-## Cara Kerja Ketiga File
-
-Ketiga file saling berhubungan sebagai berikut:
-
-| File | Peran dalam Website |
-| --- | --- |
-| `index.html` | Menentukan elemen apa saja yang tampil, seperti judul, paragraf, gambar, tombol, dan form. |
-| `style.css` | Mempercantik elemen HTML dan mengatur susunan halaman pada komputer, tablet, serta ponsel. |
-| `script.js` | Mengambil elemen HTML melalui `id` atau `class`, kemudian memberikan respons terhadap tindakan pengguna. |
-
-Pada bagian `<head>`, HTML memanggil file CSS:
+HTML menghubungkan CSS melalui:
 
 ```html
 <link rel="stylesheet" href="style.css">
 ```
 
-Pada bagian paling bawah `<body>`, HTML memanggil file JavaScript:
+HTML menghubungkan JavaScript melalui:
 
 ```html
 <script src="script.js"></script>
 ```
 
-JavaScript ditempatkan di bagian bawah agar seluruh elemen HTML sudah dibuat oleh browser sebelum JavaScript mencoba mencarinya.
+Alur kerjanya adalah:
+
+1. Browser membaca struktur dan konten dari `index.html`.
+2. Browser mengambil `style.css` untuk mengatur tampilan.
+3. Browser menjalankan `script.js` untuk menambahkan interaksi.
+4. HTML mengambil gambar lokal dari folder `assets`.
+5. HTML mengambil video YouTube dan audio contoh melalui internet.
 
 ---
 
-# Penjelasan `index.html`
+# Penerapan Materi Pertemuan 1-15
 
-## 1. Deklarasi dan Bagian `<head>`
+## Ringkasan Penerapan
+
+| Pertemuan | Materi | Penerapan pada Proyek |
+| --- | --- | --- |
+| 1 | Pengenalan dasar HTML | Menggunakan `DOCTYPE`, `html`, `head`, `title`, dan `body`. |
+| 2 | Tag, elemen, dan atribut | Menggunakan tag HTML beserta atribut `id`, `class`, `href`, `src`, dan `alt`. |
+| 3 | Paragraf | Menggunakan `<p>`, `<div>`, dan `<br>`. |
+| 4 | Heading, komentar, dan text formatting | Menggunakan `<h1>` sampai `<h3>`, komentar HTML, `<b>`, `<strong>`, `<em>`, dan `<small>`. |
+| 5 | Link | Menggunakan link internal, eksternal, anchor, gambar sebagai link, dan `target="_blank"`. |
+| 6 | Gambar dan tabel | Menggunakan `<img>`, `<figure>`, `<figcaption>`, dan tabel kurikulum. |
+| 7 | List | Menggunakan unordered list `<ul>` dan ordered list `<ol>`. |
+| 8 | Modul tidak disertakan | Tidak dipetakan secara khusus karena file Pertemuan 8 tidak tersedia. |
+| 9 | Form | Menggunakan `<form>`, `<label>`, `<input>`, `<textarea>`, dan tombol submit. |
+| 10 | Elemen semantik | Menggunakan `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<figure>`, dan `<footer>`. |
+| 11 | Video HTML | Menggunakan YouTube `<iframe>` dan contoh `<video>` dengan `<source>`. |
+| 12 | Audio HTML | Menggunakan `<audio controls>` dan `<source>`. |
+| 13 | Project website | Menggabungkan materi menjadi website edukasi yang lengkap. |
+| 14 | Dasar CSS | Menggunakan external CSS, selector, property, dan value. |
+| 15 | Lima selector CSS | Menggunakan tag, class, ID, attribute, dan universal selector. |
+
+## Pertemuan 1 - Pengenalan Dasar HTML
+
+Struktur dasar berada pada awal `index.html`:
 
 ```html
 <!DOCTYPE html>
 <html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Madrasah Wihdatul Muslimat | Portal Edukasi</title>
+</head>
+<body>
+  <!-- Isi website -->
+</body>
+</html>
 ```
 
-- `<!DOCTYPE html>` memberi tahu browser bahwa dokumen menggunakan HTML5.
-- `<html lang="id">` menandakan bahwa bahasa utama website adalah Bahasa Indonesia.
+Penjelasan:
 
-Bagian `<head>` menyimpan informasi mengenai halaman, tetapi sebagian besar tidak terlihat langsung di dalam isi website.
+- `<!DOCTYPE html>` menyatakan dokumen menggunakan HTML5.
+- `<html lang="id">` menjadi elemen utama dan menyatakan bahasa Indonesia.
+- `<head>` menyimpan informasi halaman yang dibaca browser.
+- `<title>` menentukan tulisan pada tab browser.
+- `<body>` membungkus seluruh isi yang tampil.
+- Nama `index.html` digunakan agar file otomatis menjadi halaman awal saat masuk ke hosting.
+
+## Pertemuan 2 - Tag, Elemen, dan Atribut
+
+Tag merupakan penanda HTML, elemen merupakan bagian lengkap dari tag pembuka sampai tag penutup, sedangkan atribut memberikan informasi tambahan.
 
 ```html
-<meta charset="UTF-8">
+<img
+  src="assets/logo-madrasah.jpg"
+  alt="Logo Madrasah Wihdatul Muslimat">
 ```
 
-Kode tersebut membuat browser dapat menampilkan berbagai karakter dengan benar, termasuk tanda baca dan huruf khusus.
+Penjelasan:
+
+- `<img>` adalah tag gambar.
+- Keseluruhan kode tersebut merupakan elemen gambar.
+- `src` menentukan lokasi gambar.
+- `alt` memberikan teks alternatif jika gambar tidak dapat ditampilkan.
+
+Atribut global yang digunakan antara lain:
+
+- `class` untuk menghubungkan elemen dengan CSS.
+- `id` sebagai identitas unik dan tujuan navigasi atau JavaScript.
+- `data-filter` dan `data-cat` untuk menyimpan kategori galeri.
+- `title` untuk menjelaskan judul video YouTube.
+
+## Pertemuan 3 - Membuat Paragraf
+
+Tag `<p>` digunakan untuk menulis deskripsi pada profil, kurikulum, wawasan, kegiatan, media, dan kontak.
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<p>Materi yang diajarkan di madrasah mencakup tujuh bidang pembelajaran.</p>
 ```
 
-Kode `viewport` membuat ukuran halaman menyesuaikan lebar perangkat. Bagian ini penting agar website dapat tampil dengan baik pada ponsel.
+Tag `<div>` digunakan sebagai pembungkus agar beberapa elemen mudah disusun dengan CSS. Tag `<br>` digunakan untuk membuat baris baru pada judul hero dan nomor statistik.
 
 ```html
-<meta name="description" content="...">
+<h1>
+  Belajar Agama.<br>
+  <em>Menumbuhkan Akhlak.</em><br>
+  Menjadi Generasi Berilmu.
+</h1>
 ```
 
-`description` berisi ringkasan website yang dapat digunakan oleh mesin pencari.
+## Pertemuan 4 - Heading, Komentar, dan Text Formatting
+
+Heading membentuk urutan judul:
+
+- `<h1>` untuk judul utama website.
+- `<h2>` untuk judul setiap section.
+- `<h3>` untuk judul kartu atau subbagian.
+
+Komentar HTML menandai fungsi setiap bagian source code dan tidak tampil di browser.
 
 ```html
-<title>Madrasah Wihdatul Muslimat | Portal Edukasi</title>
+<!-- Bagian kurikulum, list, dan tabel pembelajaran -->
 ```
 
-`title` menentukan tulisan yang tampil pada tab browser.
+Text formatting yang digunakan:
 
-## 2. Header dan Navigasi
+| Tag | Fungsi | Contoh Penggunaan |
+| --- | --- | --- |
+| `<b>` | Membuat teks tebal secara visual. | Nomor statistik dan label informasi. |
+| `<strong>` | Menyatakan teks penting. | Nama madrasah dan tahun berdiri. |
+| `<em>` | Memberikan penekanan. | Teks “Menumbuhkan Akhlak”. |
+| `<small>` | Membuat informasi tambahan lebih kecil. | Nomor statistik pada kartu hero. |
+| `<code>` | Menampilkan nama tag sebagai kode. | Penjelasan tag `<video>`. |
+
+## Pertemuan 5 - Membuat Link
+
+### Link Internal
+
+Link internal mengarah ke section pada halaman yang sama.
 
 ```html
-<header class="header">
+<a href="#kurikulum">Kurikulum</a>
+<section id="kurikulum">...</section>
 ```
 
-`header` merupakan bagian paling atas website. Di dalamnya terdapat logo, nama madrasah, tombol menu ponsel, dan navigasi.
+Nilai `#kurikulum` mencari elemen dengan `id="kurikulum"`.
+
+### Link Eksternal
+
+Link eksternal mengarah ke Instagram, Kementerian Agama, MDN, atau YouTube.
 
 ```html
-<a class="brand" href="#beranda">
+<a
+  href="https://youtu.be/pcsWgMMDYmI"
+  target="_blank"
+  rel="noopener">
+  Buka video di YouTube
+</a>
 ```
 
-Elemen tersebut menjadi identitas atau merek website. Nilai `href="#beranda"` membuat pengguna kembali ke bagian beranda ketika logo atau nama madrasah diklik.
+- `href` menentukan alamat tujuan.
+- `target="_blank"` membuka link pada tab baru.
+- `rel="noopener"` menambah keamanan.
+
+Logo header juga menjadi link karena `<img>` diletakkan di dalam tag `<a>`.
+
+## Pertemuan 6 - Gambar dan Tabel
+
+### Gambar
+
+Gambar menggunakan tag `<img>` dengan alamat relatif menuju folder `assets`.
 
 ```html
-<button class="menu" id="menuBtn" aria-label="Buka menu">☰</button>
+<figure data-cat="rihlah">
+  <img src="assets/kegiatan-16.jpeg" alt="Rihlah bersama peserta didik">
+  <figcaption>Rihlah - kebersamaan peserta didik</figcaption>
+</figure>
 ```
 
-Tombol ini dipakai untuk membuka dan menutup menu pada layar kecil. Penjelasannya adalah:
+- `<figure>` membungkus gambar dan keterangannya.
+- `<figcaption>` memberikan keterangan gambar.
+- `data-cat` menyimpan kategori yang dibaca JavaScript.
 
-- `class="menu"` digunakan oleh CSS untuk mengatur tampilan tombol.
-- `id="menuBtn"` digunakan JavaScript untuk menemukan tombol.
-- `aria-label="Buka menu"` membantu pembaca layar memahami fungsi tombol.
-- Simbol `☰` dikenal sebagai ikon hamburger menu.
+### Tabel
+
+Tabel merangkum bidang pembelajaran dan fokus materi.
 
 ```html
-<nav id="navMenu">
+<table class="curriculum-table">
+  <caption>Daftar bidang pembelajaran dan fokus materi</caption>
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Bidang Pembelajaran</th>
+      <th scope="col">Fokus Materi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Al-Qur'an</td>
+      <td>Membaca dan memahami dasar-dasar Al-Qur'an.</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-`nav` merupakan elemen semantik untuk kumpulan menu navigasi. Setiap tautan mengarah ke `id` bagian tertentu, misalnya `href="#profil"` mengarah ke `<section id="profil">`.
+Penjelasan tag tabel:
 
-## 3. Elemen `<main>`
+- `<table>` membungkus seluruh tabel.
+- `<caption>` memberi keterangan tabel.
+- `<thead>` membungkus kepala tabel.
+- `<tbody>` membungkus isi tabel.
+- `<tr>` membuat satu baris.
+- `<th>` membuat sel judul.
+- `<td>` membuat sel data.
+- `scope="col"` menyatakan judul berlaku untuk satu kolom.
 
-Elemen `<main>` membungkus isi utama website. Di dalamnya terdapat beberapa `section` atau bagian halaman.
+## Pertemuan 7 - Membuat List
 
-### A. Bagian Beranda atau Hero
+Website memakai dua jenis list.
+
+### Unordered List
 
 ```html
-<section id="beranda" class="hero">
+<ul>
+  <li>Terbiasa membaca dan mempelajari Al-Qur'an.</li>
+  <li>Memahami dasar keimanan dan pelaksanaan ibadah.</li>
+</ul>
 ```
 
-Bagian hero merupakan tampilan pertama yang dilihat pengunjung. Bagian ini terdiri dari:
+List ini digunakan untuk **Hasil Pembelajaran yang Diharapkan**.
 
-- `.hero-bg` sebagai gambar latar belakang.
-- `.hero-shade` sebagai lapisan warna gelap di atas gambar agar tulisan lebih mudah dibaca.
-- `.hero-content` sebagai tempat teks dan kartu identitas madrasah.
-- `.hero-copy` sebagai tempat judul, paragraf, dan tombol.
-- `.hero-card` sebagai kartu berisi logo, moto, dan nomor statistik madrasah.
-- `.scroll-hint` sebagai petunjuk agar pengguna menggulir halaman.
-
-Tag `<h1>` dipakai untuk judul utama halaman. Tag `<em>` pada sebagian judul digunakan agar bagian tersebut dapat diberi warna emas oleh CSS.
+### Ordered List
 
 ```html
-<a class="btn gold" href="#kurikulum">Lihat Kurikulum</a>
+<ol>
+  <li>Kegiatan pembukaan dan doa bersama.</li>
+  <li>Penyampaian materi oleh guru.</li>
+</ol>
 ```
 
-Elemen ini sebenarnya merupakan tautan, tetapi tampil seperti tombol karena memiliki class `btn` dan `gold`.
+List ini digunakan untuk **Contoh Alur Kegiatan Belajar**.
 
-### B. Bagian Profil
+## Pertemuan 8
+
+File materi Pertemuan 8 tidak disertakan bersama bahan tugas. Oleh karena itu, README tidak menyebutkan topik khusus untuk Pertemuan 8 agar penjelasan tetap sesuai dengan materi yang tersedia.
+
+## Pertemuan 9 - Membuat Form
+
+Form kontak menerima nama, email, dan pesan.
 
 ```html
-<section id="profil" class="section">
+<form id="contactForm" action="#" method="post">
+  <label>
+    Nama
+    <input id="name" name="name" type="text" required>
+  </label>
+
+  <label>
+    Email
+    <input id="email" name="email" type="email" required>
+  </label>
+
+  <label>
+    Pesan
+    <textarea id="message" name="message" required></textarea>
+  </label>
+
+  <button type="submit">Kirim Pesan</button>
+</form>
 ```
 
-Bagian profil menjelaskan identitas dan sejarah singkat madrasah. Class `.profile-grid` membagi isi menjadi dua kolom:
+Penjelasan:
 
-1. Kolom kiri berisi judul, penjelasan, dan data singkat.
-2. Kolom kanan berisi foto papan identitas madrasah.
+- `<form>` membungkus seluruh isian.
+- `action="#"` menunjukkan tujuan masih pada halaman yang sama.
+- `method="post"` menunjukkan metode pengiriman data.
+- `<label>` menjelaskan nama kolom.
+- `<input type="text">` menerima nama.
+- `<input type="email">` menerima dan memeriksa format dasar email.
+- `<textarea>` menerima pesan panjang.
+- `name` menjadi nama data ketika form dikirim.
+- `required` membuat kolom wajib diisi.
+- `<button type="submit">` mengirim form.
 
-Class `.facts` berisi empat informasi utama, yaitu tahun berdiri, nomor statistik, jenjang dasar, dan jenjang lanjutan.
+Form masih berupa **form demo**. JavaScript mencegah halaman berpindah, menampilkan pesan berhasil, lalu mengosongkan isian. Data belum dikirim ke email atau database karena belum menggunakan backend.
 
-### C. Bagian Kurikulum
+## Pertemuan 10 - Elemen Semantik
 
-```html
-<section id="kurikulum" class="section soft">
-```
+Elemen semantik menjelaskan arti bagian website.
 
-Bagian ini menampilkan tujuh mata pelajaran. Setiap mata pelajaran menggunakan tag `<article>` karena setiap kartu mempunyai isi yang dapat dipahami sebagai satu pembahasan tersendiri.
-
-```html
-<article class="subject featured">
-```
-
-Class `subject` memberikan bentuk dasar kartu, sedangkan class `featured` memberikan garis hijau yang lebih tebal agar kartu Tauhid terlihat menonjol.
-
-`curriculum-note` berisi catatan dan tautan menuju sumber Kementerian Agama. Pada tautan tersebut terdapat:
-
-- `target="_blank"` untuk membuka halaman pada tab baru.
-- `rel="noopener"` untuk menambah keamanan saat membuka situs lain pada tab baru.
-
-### D. Bagian Wawasan Edukasi
-
-```html
-<section id="wawasan" class="section insight">
-```
-
-Bagian ini menjelaskan pentingnya pendidikan agama bagi anak. Susunannya terdiri dari:
-
-- Satu kartu besar yang berisi kutipan dan penjelasan utama.
-- Empat kartu kecil yang membahas karakter, moral digital, kesehatan mental, dan kecerdasan spiritual.
-- Satu kotak referensi yang menjelaskan pengertian Madrasah Diniyah Takmiliyah.
-
-### E. Bagian Kegiatan
-
-```html
-<section id="kegiatan" class="section soft">
-```
-
-Bagian kegiatan menggunakan empat kartu untuk menampilkan:
-
-1. Rihlah.
-2. Pesantren Kilat.
-3. Kegiatan Belajar Mengajar atau KBM.
-4. Jumat Berkah.
-
-Setiap kartu memiliki gambar, kategori kegiatan, judul, dan deskripsi. Tag `alt` pada gambar menjelaskan isi gambar jika gambar gagal dimuat dan juga membantu aksesibilitas.
-
-### F. Bagian Galeri
-
-```html
-<section id="galeri" class="section gallery-section">
-```
-
-Bagian galeri mempunyai tombol filter dan kumpulan foto. Setiap tombol menyimpan kategori melalui atribut `data-filter`.
-
-```html
-<button class="filter" data-filter="kbm">KBM</button>
-```
-
-Setiap foto menyimpan kategori melalui atribut `data-cat`.
-
-```html
-<figure data-cat="kbm">
-```
-
-JavaScript membandingkan `data-filter` pada tombol dengan `data-cat` pada foto. Jika kategorinya tidak sama, foto diberi class `hide` sehingga tidak ditampilkan.
-
-Tag yang digunakan pada setiap gambar adalah:
-
-- `<figure>` untuk membungkus gambar dan keterangannya.
-- `<img>` untuk menampilkan gambar.
-- `<figcaption>` untuk memberikan keterangan gambar.
-
-Nilai kategori bersifat **case-sensitive**, artinya huruf besar dan kecil dianggap berbeda. Pada kode saat ini, kategori `Madrasah` pada tombol dan gambar sama-sama memakai huruf `M` besar sehingga masih dapat bekerja.
-
-### G. Bagian Call to Action
-
-```html
-<section class="cta-section">
-```
-
-CTA merupakan singkatan dari **Call to Action**, yaitu bagian yang mengajak pengunjung melakukan sesuatu. Pada website ini, pengunjung diajak mengikuti akun Instagram madrasah.
-
-### H. Bagian Kontak dan Form
-
-```html
-<section id="kontak" class="section contact">
-```
-
-Bagian kontak dibagi menjadi dua kolom:
-
-1. Informasi alamat, nomor statistik, telepon, email, dan Instagram.
-2. Form untuk menulis pertanyaan.
-
-Pada input terdapat atribut `required`, sehingga browser meminta pengguna mengisi kolom sebelum form diproses. Input email menggunakan `type="email"`, sehingga browser juga memeriksa bentuk dasar alamat email.
-
-Form ini masih merupakan **form demo**. Saat tombol diklik, data tidak dikirim ke email, server, atau database. JavaScript hanya menampilkan pesan berhasil pada halaman lalu mengosongkan form.
-
-## 4. Footer, Tombol Atas, dan Pemanggilan JavaScript
-
-```html
-<footer>...</footer>
-```
-
-`footer` merupakan bagian penutup website. Bagian ini menampilkan nama, lokasi, tahun berdiri, dan tautan Instagram.
-
-```html
-<button class="top" id="topBtn">↑</button>
-```
-
-Tombol tersebut akan muncul setelah halaman digulir lebih dari 450 piksel. Ketika diklik, halaman kembali ke posisi paling atas secara halus.
-
-```html
-<script src="script.js"></script>
-```
-
-Kode ini menghubungkan HTML dengan file JavaScript.
-
-## Tag HTML Penting yang Digunakan
-
-| Tag | Fungsi |
+| Elemen | Fungsi pada Website |
 | --- | --- |
-| `<header>` | Membungkus kepala halaman dan navigasi. |
-| `<nav>` | Membungkus menu navigasi. |
-| `<main>` | Membungkus isi utama website. |
+| `<header>` | Membungkus logo dan navigasi utama. |
+| `<nav>` | Membungkus link menu. |
+| `<main>` | Membungkus konten utama. |
 | `<section>` | Membagi halaman menjadi beberapa bagian. |
-| `<article>` | Membungkus satu konten yang dapat berdiri sebagai pembahasan sendiri. |
-| `<figure>` | Membungkus gambar beserta keterangannya. |
-| `<figcaption>` | Memberikan keterangan pada gambar. |
-| `<form>` | Membuat bagian formulir. |
-| `<label>` | Memberikan label pada input. |
-| `<input>` | Menerima teks pendek dari pengguna. |
-| `<textarea>` | Menerima pesan yang lebih panjang. |
-| `<footer>` | Membuat bagian penutup website. |
+| `<article>` | Membungkus satu kartu materi atau kegiatan. |
+| `<figure>` | Membungkus gambar galeri. |
+| `<figcaption>` | Memberikan keterangan gambar. |
+| `<details>` | Menyimpan contoh video yang dapat dibuka dan ditutup. |
+| `<summary>` | Menjadi judul yang dapat diklik pada `details`. |
+| `<footer>` | Membungkus penutup website. |
 
-## Perbedaan `class` dan `id`
+## Pertemuan 11 - Menampilkan Video
 
-- `class` dapat digunakan oleh banyak elemen. Contohnya, class `btn` digunakan pada beberapa tombol.
-- `id` seharusnya unik dalam satu halaman. Contohnya, `id="contactForm"` hanya digunakan oleh satu form.
-- CSS biasanya memilih class menggunakan tanda titik, misalnya `.btn`.
-- CSS atau JavaScript memilih id menggunakan tanda pagar atau fungsi pencarian id, misalnya `#contactForm` atau `getElementById('contactForm')`.
+Website menggunakan dua cara menampilkan video.
 
----
+### Video YouTube
 
-# Penjelasan `style.css`
+Link pendek YouTube tidak bisa langsung digunakan sebagai `src` pada tag `<video>`. URL diubah menjadi format embed dan ditampilkan dengan `<iframe>`.
 
-## 1. Mengambil Font dari Google Fonts
-
-```css
-@import url('https://fonts.googleapis.com/...');
+```html
+<iframe
+  class="media-player"
+  src="https://www.youtube.com/embed/pcsWgMMDYmI"
+  title="Video pembelajaran Madrasah Wihdatul Muslimat"
+  loading="lazy"
+  allowfullscreen>
+</iframe>
 ```
 
-`@import` mengambil font `DM Sans` dan `Playfair Display` dari Google Fonts. `DM Sans` dipakai untuk teks umum, sedangkan `Playfair Display` dipakai untuk judul agar terlihat lebih formal.
+- `src` berisi URL embed YouTube.
+- `title` menjelaskan isi video untuk aksesibilitas.
+- `loading="lazy"` menunda pemuatan video.
+- `allowfullscreen` mengizinkan layar penuh.
 
-Jika perangkat tidak terhubung ke internet, browser akan memakai font cadangan seperti Arial atau Georgia.
+### Tag Video HTML5
 
-## 2. Variabel Warna pada `:root`
+Contoh tag video HTML5 tetap tersedia di dalam elemen `details`.
+
+```html
+<video class="media-player" controls preload="metadata">
+  <source
+    src="https://developer.mozilla.org/shared-assets/videos/flower.mp4"
+    type="video/mp4">
+  Browser Anda tidak mendukung video HTML5.
+</video>
+```
+
+- `<video>` membuat pemutar video HTML5.
+- `controls` menampilkan kontrol pemutaran.
+- `preload="metadata"` hanya mengambil informasi dasar sebelum diputar.
+- `<source>` menentukan alamat dan tipe file.
+- Teks di dalam `<video>` menjadi fallback jika browser tidak mendukung video.
+
+## Pertemuan 12 - Menambahkan Audio
+
+Audio memakai tag `<audio>` dan sumber MP3 eksternal.
+
+```html
+<audio class="audio-player" controls preload="metadata">
+  <source
+    src="https://developer.mozilla.org/shared-assets/audio/t-rex-roar.mp3"
+    type="audio/mpeg">
+  Browser Anda tidak mendukung audio HTML5.
+</audio>
+```
+
+Penjelasan:
+
+- `<audio>` membuat pemutar suara.
+- `controls` memberikan kendali pemutaran.
+- `<source>` menentukan lokasi file audio.
+- `type="audio/mpeg"` menyatakan format MP3.
+- Audio tidak memakai `autoplay` agar tidak langsung berbunyi.
+
+## Pertemuan 13 - Membuat Project Website
+
+Materi sebelumnya digabungkan menjadi satu proyek dengan:
+
+- Identitas dan navigasi.
+- Beranda berbentuk hero.
+- Profil madrasah.
+- Kurikulum berupa kartu, list, dan tabel.
+- Wawasan edukasi.
+- Video dan audio.
+- Kegiatan dan galeri.
+- Form kontak.
+- Footer.
+
+Walaupun contoh modul membuat beberapa halaman, proyek ini memakai konsep single-page agar seluruh informasi dapat dilihat dalam satu halaman.
+
+## Pertemuan 14 - Pengenalan Dasar CSS
+
+CSS ditulis pada file terpisah bernama `style.css`. Cara ini disebut **External CSS**.
 
 ```css
-:root {
-  --green: #006b35;
-  --gold: #f1cc45;
-  --cream: #fffdf7;
+.btn {
+  border: 0;
+  border-radius: 11px;
+  padding: 12px 19px;
+  cursor: pointer;
 }
 ```
 
-`:root` digunakan untuk membuat variabel CSS yang dapat dipakai berulang kali. Contohnya, `var(--green)` mengambil warna dari variabel `--green`. Cara ini membuat warna website lebih konsisten dan lebih mudah diganti.
+- `.btn` merupakan selector.
+- Isi `{ }` merupakan blok deklarasi.
+- `border-radius` dan `padding` merupakan property.
+- `11px` dan `12px 19px` merupakan value.
 
-Variabel yang digunakan pada proyek ini adalah:
+## Pertemuan 15 - Lima Macam Selector CSS
 
-| Variabel | Kegunaan Umum |
-| --- | --- |
-| `--green` | Warna hijau utama. |
-| `--deep` | Warna hijau gelap untuk hero, CTA, dan footer. |
-| `--green2` | Warna hijau terang untuk aksen. |
-| `--gold` | Warna emas untuk tombol dan bagian penting. |
-| `--cream` | Warna latar utama halaman. |
-| `--soft` | Warna hijau sangat muda untuk latar section. |
-| `--ink` | Warna teks utama. |
-| `--muted` | Warna teks sekunder. |
-| `--line` | Warna garis atau border. |
-| `--white` | Warna putih. |
-| `--shadow` | Bentuk bayangan yang digunakan pada kartu. |
-
-## 3. Aturan Dasar Website
+| Jenis Selector | Contoh | Fungsi |
+| --- | --- | --- |
+| Tag selector | `body`, `nav`, `p`, `footer` | Memilih berdasarkan nama tag. |
+| Class selector | `.btn`, `.hero`, `.media-card` | Memilih berdasarkan class. |
+| ID selector | `#media` | Memilih berdasarkan ID. |
+| Attribute selector | `input[required]` | Memilih elemen dengan atribut tertentu. |
+| Universal selector | `*` | Memilih seluruh elemen HTML. |
 
 ```css
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+}
+
+#media {
+  scroll-margin-top: 78px;
+}
+
+.contact-form input[required] {
+  border-left: 3px solid var(--green2);
 }
 ```
 
-- Selector `*` memilih seluruh elemen.
-- `box-sizing: border-box` membuat perhitungan ukuran elemen lebih mudah karena padding dan border masuk ke dalam lebar elemen.
-- `scroll-behavior: smooth` membuat perpindahan menuju bagian tertentu berlangsung halus.
+Nilai warna yang digunakan antara lain:
 
-Aturan `body` menghapus jarak bawaan browser, menentukan font, warna, latar, dan jarak antarbaris. Class `.container` membatasi lebar isi maksimal 1140 piksel, tetapi tetap memakai 92% lebar layar pada perangkat yang lebih kecil.
-
-## 4. Header dan Navigasi
-
-| Selector | Fungsi |
-| --- | --- |
-| `.header` | Membuat header tetap menempel di atas dengan `position: sticky`. |
-| `.nav` | Menyusun logo dan menu secara mendatar menggunakan Flexbox. |
-| `.brand` | Menyusun logo dengan nama madrasah dan menghapus garis bawah tautan. |
-| `.brand img` | Membuat logo berbentuk lingkaran berukuran 48 × 48 piksel. |
-| `.brand b` | Mengatur tulisan nama madrasah. |
-| `.brand small` | Mengatur subjudul madrasah dengan ukuran lebih kecil. |
-| `nav` | Menyusun seluruh menu secara mendatar. |
-| `nav a` | Mengatur tampilan setiap tautan menu. |
-| `nav a:hover` | Mengubah warna menu saat kursor diarahkan ke menu. |
-| `.menu` | Mengatur tombol hamburger yang awalnya disembunyikan pada layar besar. |
-
-`z-index: 50` pada header membuat header berada di atas elemen lain saat halaman digulir. `backdrop-filter: blur(14px)` memberikan efek kaca buram pada latar header.
-
-## 5. Hero atau Beranda
-
-| Selector | Fungsi |
-| --- | --- |
-| `.hero` | Menentukan tinggi, warna, dan posisi bagian beranda. |
-| `.hero-bg` | Menampilkan gambar kegiatan sebagai latar penuh. |
-| `.hero-shade` | Memberikan lapisan gradasi gelap di atas gambar. |
-| `.hero-content` | Membuat dua kolom untuk teks dan kartu logo menggunakan CSS Grid. |
-| `.eyebrow` | Mengatur teks kecil di atas judul. |
-| `.light` | Mengubah warna teks kecil menjadi emas. |
-| `h1, h2` | Menggunakan font Playfair Display dan jarak baris yang lebih rapat. |
-| `h1` | Mengatur ukuran judul utama secara responsif menggunakan `clamp()`. |
-| `h1 em` | Memberi warna emas pada bagian judul tertentu. |
-| `.actions` | Menyusun tombol-tombol hero dengan Flexbox. |
-| `.btn` | Membuat bentuk dasar tombol yang dapat dipakai ulang. |
-| `.gold` | Memberikan warna emas pada tombol. |
-| `.glass` | Membuat tombol transparan seperti kaca. |
-| `.hero-card` | Membuat kartu logo transparan dengan sudut membulat. |
-| `.hero-card img` | Membuat logo besar berbentuk lingkaran dengan garis emas. |
-| `.scroll-hint` | Meletakkan petunjuk gulir di bawah hero. |
-
-Fungsi `clamp(43px, 6vw, 72px)` berarti ukuran judul minimal 43 piksel, mengikuti lebar layar sebesar `6vw`, dan maksimal 72 piksel.
-
-## 6. Section Umum dan Profil
-
-| Selector | Fungsi |
-| --- | --- |
-| `.section` | Memberikan jarak atas dan bawah sebesar 92 piksel. |
-| `.soft` | Memberikan latar hijau muda. |
-| `.profile-grid, .contact-grid` | Membuat susunan dua kolom. |
-| `.facts` | Menyusun kotak fakta dalam dua kolom. |
-| `.facts div` | Memberikan latar, border, padding, dan sudut membulat pada fakta. |
-| `.facts b` | Menonjolkan nilai utama dengan warna hijau. |
-| `.facts span` | Mengatur keterangan fakta dengan teks kecil. |
-| `.profile-photo` | Menjadi acuan posisi untuk foto dan caption. |
-| `.profile-photo img` | Membuat foto memenuhi kolom dengan sudut membulat dan bayangan. |
-| `.photo-caption` | Dirancang sebagai caption yang berada di atas bagian bawah foto. |
-
-## 7. Kurikulum
-
-| Selector | Fungsi |
-| --- | --- |
-| `.section-head` | Menyusun judul bagian dan penjelasan secara bersebelahan. |
-| `.subject-grid` | Membuat daftar mata pelajaran dalam dua kolom. |
-| `.subject` | Membuat bentuk kartu mata pelajaran. |
-| `.subject > span` | Membuat nomor mata pelajaran berbentuk lingkaran. |
-| `.subject h3` | Mengatur judul mata pelajaran. |
-| `.subject p` | Mengatur deskripsi mata pelajaran. |
-| `.subject.featured` | Memberikan border lebih tebal pada mata pelajaran pilihan. |
-| `.curriculum-note` | Membuat kotak catatan kurikulum. |
-
-Tanda `>` pada `.subject > span` berarti CSS hanya memilih `span` yang menjadi anak langsung dari elemen `.subject`.
-
-## 8. Wawasan Edukasi
-
-| Selector | Fungsi |
-| --- | --- |
-| `.insight` | Memberikan latar putih pada bagian wawasan. |
-| `.insight-grid` | Membagi isi menjadi kartu besar dan daftar kartu kecil. |
-| `.insight-card` | Membuat kartu utama berwarna hijau gelap. |
-| `.insight-card .quote` | Membuat simbol kutip berukuran besar dan berwarna emas. |
-| `.insight-list` | Menyusun empat wawasan dalam dua kolom. |
-| `.insight-list article` | Membentuk kartu wawasan kecil. |
-| `.reference-box` | Membuat kotak referensi dengan garis emas di sebelah kiri. |
-
-## 9. Kegiatan
-
-| Selector | Fungsi |
-| --- | --- |
-| `.activity-cards` | Membuat empat kolom kartu kegiatan. |
-| `.activity-cards article` | Mengatur bentuk dasar setiap kartu. |
-| `.activity-img` | Membatasi tinggi dan menyembunyikan bagian gambar yang keluar. |
-| `.activity-img img` | Membuat gambar memenuhi kotak dengan `object-fit: cover`. |
-| `.activity-cards article:hover img` | Memperbesar gambar sedikit saat kartu disentuh kursor. |
-| `.activity-cards article > div:last-child` | Memberikan ruang pada bagian teks kartu. |
-| `.activity-cards span` | Mengatur tulisan kategori kegiatan. |
-
-`transition: .4s` membuat proses pembesaran gambar berlangsung selama 0,4 detik sehingga terlihat halus.
-
-## 10. Galeri dan Filter
-
-| Selector | Fungsi |
-| --- | --- |
-| `.gallery-section` | Memberikan latar putih pada galeri. |
-| `.filters` | Menyusun tombol filter dan mengizinkannya pindah baris. |
-| `.filter` | Membuat tombol berbentuk kapsul. |
-| `.filter.active, .filter:hover` | Memberi warna hijau pada filter aktif atau saat disentuh kursor. |
-| `.gallery-grid` | Menyusun galeri dalam empat kolom. |
-| `.gallery-grid figure` | Mengatur bentuk wadah gambar. |
-| `.gallery-grid img` | Menyamakan ukuran tampilan gambar. |
-| `.gallery-grid figcaption` | Mengatur keterangan gambar. |
-| `.gallery-grid figure.hide` | Menyembunyikan foto yang tidak sesuai dengan filter. |
-
-Class `hide` tidak ditulis langsung pada HTML karena class tersebut ditambahkan dan dihapus oleh JavaScript sesuai filter yang dipilih.
-
-## 11. CTA, Kontak, Footer, dan Tombol Atas
-
-| Selector | Fungsi |
-| --- | --- |
-| `.cta-section` | Membuat bagian ajakan dengan latar hijau gelap. |
-| `.cta-box` | Menyusun tulisan CTA dan tombol Instagram. |
-| `.contact-list` | Menyusun daftar informasi kontak secara vertikal. |
-| `.contact-form` | Membuat form seperti kartu putih dengan bayangan. |
-| `.contact-form label` | Mengatur label setiap isian. |
-| `.contact-form input, .contact-form textarea` | Mengatur lebar, border, dan ruang dalam kolom isian. |
-| `.green` | Memberikan warna hijau pada tombol kirim. |
-| `.form-result` | Mengatur tampilan pesan hasil pengiriman form demo. |
-| `footer` | Mengatur warna dan jarak bagian penutup. |
-| `.footer-grid` | Menyusun informasi footer dan tautan Instagram. |
-| `.top` | Membuat tombol kembali ke atas dan menyembunyikannya secara awal. |
-| `.top.show` | Menampilkan tombol atas setelah JavaScript menambahkan class `show`. |
-
-## 12. Tampilan Responsif
-
-Responsive design membuat tampilan menyesuaikan ukuran perangkat.
-
-### Layar Maksimal 900 Piksel
-
-```css
-@media (max-width: 900px) { ... }
-```
-
-Perubahan yang dilakukan adalah:
-
-- Navigasi utama disembunyikan dan berubah menjadi menu vertikal.
-- Tombol hamburger mulai ditampilkan.
-- Hero, profil, kontak, dan wawasan berubah menjadi satu kolom.
-- Kartu kurikulum berubah menjadi satu kolom.
-- Kegiatan dan galeri berubah menjadi dua kolom.
-
-### Layar Maksimal 560 Piksel
-
-```css
-@media (max-width: 560px) { ... }
-```
-
-Perubahan yang dilakukan adalah:
-
-- Ukuran judul utama diperkecil.
-- Jarak setiap section diperkecil.
-- Tombol, CTA, dan footer disusun ke bawah.
-- Fakta, wawasan, kegiatan, dan galeri berubah menjadi satu kolom.
-- Tombol dibuat selebar layar.
-- Ukuran logo pada kartu hero diperkecil.
-
-## Konsep CSS yang Digunakan
-
-| Konsep | Penjelasan Sederhana |
-| --- | --- |
-| CSS Variable | Menyimpan warna atau nilai agar dapat dipakai berulang kali. |
-| Flexbox | Menyusun elemen dalam satu baris atau satu kolom. |
-| CSS Grid | Membuat susunan beberapa baris dan kolom. |
-| Pseudo-class `:hover` | Memberi efek ketika kursor berada di atas elemen. |
-| Media Query | Mengubah tampilan berdasarkan ukuran layar. |
-| Transition | Membuat perubahan tampilan bergerak secara halus. |
-| `object-fit: cover` | Membuat gambar memenuhi kotak tanpa terlihat gepeng. |
-| `position: sticky` | Membuat header tetap terlihat di bagian atas. |
-| `position: absolute` | Menempatkan elemen berdasarkan elemen induknya. |
+- Hexadecimal, misalnya `#006b35`.
+- RGBA, misalnya `rgba(255, 255, 255, .3)`.
+- Variabel CSS, misalnya `var(--green)`.
 
 ---
 
-# Penjelasan `script.js`
+# Penjelasan Source Code `index.html`
 
-## 1. Menu Navigasi pada Ponsel
+## 1. Bagian `<head>`
+
+Bagian ini berisi:
+
+- `charset="UTF-8"` agar karakter tampil benar.
+- `viewport` agar tampilan menyesuaikan perangkat.
+- `description` sebagai ringkasan untuk mesin pencari.
+- `title` sebagai judul tab browser.
+- `link` untuk mengambil `style.css`.
+
+## 2. Header dan Navigasi
+
+Header berisi logo, nama madrasah, tombol hamburger, dan menu. Setiap menu memakai anchor menuju `id` section tertentu.
+
+Tombol hamburger mempunyai `id="menuBtn"`, sedangkan menu mempunyai `id="navMenu"`. Kedua ID tersebut digunakan oleh JavaScript.
+
+## 3. Section Beranda
+
+Section `hero` terdiri dari:
+
+- `.hero-bg` sebagai gambar latar.
+- `.hero-shade` sebagai lapisan gelap.
+- `.hero-copy` untuk judul, paragraf, dan tombol.
+- `.hero-card` untuk logo dan nomor statistik.
+- `.scroll-hint` sebagai petunjuk menggulir.
+
+## 4. Section Profil
+
+Profil menggunakan CSS Grid dua kolom. Kolom kiri berisi informasi dan fakta, sedangkan kolom kanan berisi foto identitas madrasah.
+
+## 5. Section Kurikulum
+
+Bagian kurikulum mempunyai:
+
+1. Kartu tujuh mata pelajaran.
+2. Unordered list hasil pembelajaran.
+3. Ordered list alur kegiatan belajar.
+4. Tabel ringkasan kurikulum.
+
+Class `featured` diberikan pada kartu Tauhid agar border lebih menonjol.
+
+## 6. Section Wawasan
+
+Bagian ini menggunakan satu kartu utama dan empat artikel kecil. Setiap `<article>` membahas satu manfaat pendidikan agama.
+
+## 7. Section Media
+
+Bagian media menampilkan:
+
+- Video YouTube melalui `<iframe>`.
+- Contoh tag `<video>` HTML5 dalam `<details>`.
+- Audio MP3 melalui `<audio>`.
+- Link menuju sumber media.
+
+Semua media eksternal memerlukan internet.
+
+## 8. Section Kegiatan
+
+Kegiatan ditampilkan dengan empat `<article>`. Setiap kartu mempunyai gambar, kategori, judul, dan deskripsi.
+
+## 9. Section Galeri
+
+Setiap foto mempunyai `data-cat`, sedangkan tombol filter mempunyai `data-filter`. JavaScript membandingkan keduanya.
+
+```html
+<button data-filter="kbm">KBM</button>
+<figure data-cat="kbm">...</figure>
+```
+
+## 10. Section CTA
+
+CTA atau **Call to Action** mengajak pengunjung mengikuti Instagram madrasah.
+
+## 11. Section Kontak
+
+Bagian kontak berisi informasi madrasah dan form pertanyaan. Form menggunakan validasi HTML melalui `type="email"` dan `required`.
+
+## 12. Footer dan JavaScript
+
+Footer menampilkan identitas singkat dan link Instagram. Tombol `topBtn` digunakan untuk kembali ke atas. JavaScript dipanggil di akhir `body` agar elemen HTML sudah tersedia.
+
+---
+
+# Penjelasan Source Code `style.css`
+
+## 1. Google Fonts
+
+`@import` mengambil `DM Sans` untuk teks umum dan `Playfair Display` untuk judul.
+
+## 2. Variabel CSS
+
+Variabel disimpan pada `:root` agar dapat digunakan berulang kali.
+
+| Variabel | Fungsi |
+| --- | --- |
+| `--green` | Warna hijau utama. |
+| `--deep` | Warna hijau gelap. |
+| `--green2` | Warna hijau aksen. |
+| `--gold` | Warna emas. |
+| `--cream` | Warna latar utama. |
+| `--soft` | Warna latar hijau muda. |
+| `--ink` | Warna teks utama. |
+| `--muted` | Warna teks sekunder. |
+| `--line` | Warna border. |
+| `--shadow` | Bayangan kartu. |
+
+## 3. Aturan Dasar
+
+Universal selector mengatur `box-sizing` dan smooth scroll. `body` menentukan margin, font, warna, latar, dan jarak baris. `.container` membatasi lebar konten.
+
+## 4. Flexbox dan CSS Grid
+
+Flexbox digunakan pada navigasi, tombol, header section, CTA, dan footer. CSS Grid digunakan pada hero, profil, kurikulum, wawasan, kegiatan, galeri, media, dan kontak.
+
+```css
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+```
+
+Kode tersebut membuat video dan audio berada dalam dua kolom.
+
+## 5. Efek CSS
+
+- `:hover` mengubah warna menu dan tombol filter.
+- `transition` membuat efek berjalan halus.
+- `transform: scale()` memperbesar gambar kegiatan.
+- `backdrop-filter` memberikan efek kaca.
+- `border-radius` membuat sudut melengkung.
+- `box-shadow` memberikan bayangan.
+
+## 6. Tabel dan List
+
+List diatur melalui `.learning-list`. Tabel menggunakan `border-collapse`, padding, border, dan warna berbeda pada baris genap. `.table-scroll` menggunakan `overflow-x: auto` agar tabel dapat digulir pada layar kecil.
+
+## 7. Video dan Audio
+
+Class `.media-player` digunakan oleh `<iframe>` dan `<video>`. `aspect-ratio: 16/9` menjaga bentuk video. `.audio-player` membuat pemutar audio memenuhi lebar kartu.
+
+## 8. Responsive Design
+
+Website menggunakan:
+
+```css
+@media (max-width: 900px) { ... }
+@media (max-width: 560px) { ... }
+```
+
+Pada layar maksimal 900 piksel:
+
+- Menu utama disembunyikan dan tombol hamburger tampil.
+- Susunan dua kolom berubah menjadi satu kolom.
+- Kegiatan dan galeri berubah menjadi dua kolom.
+
+Pada layar maksimal 560 piksel:
+
+- Kegiatan dan galeri berubah menjadi satu kolom.
+- Tombol dibuat selebar container.
+- Ukuran judul, logo, padding, dan kartu diperkecil.
+
+---
+
+# Penjelasan Source Code `script.js`
+
+## 1. Menu Ponsel
 
 ```javascript
 const menuBtn = document.getElementById('menuBtn');
 const nav = document.getElementById('navMenu');
 ```
 
-- `const` digunakan untuk membuat variabel yang tidak akan diarahkan ke nilai lain.
-- `document.getElementById()` mencari elemen HTML berdasarkan `id`.
-- `menuBtn` menyimpan tombol hamburger.
-- `nav` menyimpan elemen menu navigasi.
+Kode mengambil tombol hamburger dan menu berdasarkan `id`.
 
 ```javascript
 menuBtn?.addEventListener('click', () => {
@@ -612,30 +672,9 @@ menuBtn?.addEventListener('click', () => {
 });
 ```
 
-Penjelasan kode:
+Ketika tombol diklik, menu berubah antara `flex` dan `none`. Operator `? :` adalah operator ternary atau bentuk singkat `if...else`. Tanda `?.` memastikan event hanya dipasang jika tombol ditemukan.
 
-- `?.` disebut optional chaining. Kode event hanya dijalankan jika `menuBtn` ditemukan.
-- `addEventListener('click', ...)` menjalankan fungsi ketika tombol diklik.
-- `() => {}` adalah penulisan fungsi panah atau arrow function.
-- `nav.style.display` membaca atau mengubah CSS `display` secara langsung.
-- Operator ternary `kondisi ? nilai1 : nilai2` merupakan bentuk singkat dari `if...else`.
-- Jika menu sedang memiliki `display: flex`, menu disembunyikan menjadi `none`.
-- Jika tidak, menu ditampilkan menjadi `flex`.
-
-```javascript
-document.querySelectorAll('#navMenu a').forEach(a =>
-  a.addEventListener('click', () => {
-    if (innerWidth <= 900) nav.style.display = 'none';
-  })
-);
-```
-
-Penjelasan kode:
-
-- `querySelectorAll('#navMenu a')` mengambil seluruh tautan `a` di dalam `navMenu`.
-- `forEach()` mengulang setiap tautan yang ditemukan.
-- Ketika salah satu menu diklik pada layar maksimal 900 piksel, menu ditutup kembali.
-- `innerWidth` berisi lebar bagian dalam jendela browser.
+Ketika link dipilih pada layar maksimal 900 piksel, menu ditutup kembali.
 
 ## 2. Filter Galeri
 
@@ -644,40 +683,22 @@ const filters = document.querySelectorAll('.filter');
 const figures = document.querySelectorAll('#galleryGrid figure');
 ```
 
-- `filters` menyimpan semua tombol dengan class `filter`.
-- `figures` menyimpan semua elemen `figure` di dalam galeri.
+Alur filter:
+
+1. Pengguna memilih kategori.
+2. Class `active` dihapus dari semua tombol.
+3. Tombol yang dipilih diberi class `active`.
+4. Nilai `data-filter` disimpan ke variabel `cat`.
+5. Nilainya dibandingkan dengan `data-cat` setiap foto.
+6. Foto yang tidak sesuai diberi class `hide`.
+7. CSS menyembunyikan foto tersebut.
 
 ```javascript
-filters.forEach(btn => btn.addEventListener('click', () => {
-  filters.forEach(x => x.classList.remove('active'));
-  btn.classList.add('active');
-  const cat = btn.dataset.filter;
-  figures.forEach(fig =>
-    fig.classList.toggle(
-      'hide',
-      cat !== 'all' && fig.dataset.cat !== cat
-    )
-  );
-}));
+fig.classList.toggle(
+  'hide',
+  cat !== 'all' && fig.dataset.cat !== cat
+);
 ```
-
-Alur kode tersebut adalah:
-
-1. JavaScript memberikan event klik kepada setiap tombol filter.
-2. Class `active` dihapus dari semua tombol.
-3. Tombol yang baru diklik diberi class `active`.
-4. `btn.dataset.filter` mengambil nilai atribut `data-filter` dari tombol.
-5. Setiap gambar diperiksa nilai `data-cat`-nya.
-6. Jika kategori tombol bukan `all` dan kategori gambar tidak sama, class `hide` ditambahkan.
-7. Jika kategori sesuai, class `hide` dihapus sehingga gambar tampil.
-
-Operator yang digunakan:
-
-- `!==` berarti “tidak sama dengan” dengan pemeriksaan tipe data.
-- `&&` berarti kedua kondisi harus benar.
-- `classList.add()` menambahkan class.
-- `classList.remove()` menghapus class.
-- `classList.toggle(class, kondisi)` menambahkan class jika kondisi benar dan menghapusnya jika kondisi salah.
 
 ## 3. Form Kontak Demo
 
@@ -691,28 +712,15 @@ document.getElementById('contactForm')?.addEventListener('submit', e => {
 });
 ```
 
-Penjelasan kode:
-
-- Event `submit` terjadi ketika form dikirim.
-- Parameter `e` menyimpan informasi mengenai event yang sedang terjadi.
-- `e.preventDefault()` mencegah browser memuat ulang halaman dan mencegah proses kirim bawaan form.
-- `.value` mengambil tulisan dari kolom nama.
-- `.trim()` menghapus spasi kosong di awal dan akhir nama.
-- `.textContent` mengisi teks pada elemen `formResult`.
-- Tanda backtick membentuk **template literal**.
-- `${name}` memasukkan nilai variabel `name` ke dalam kalimat.
-- `e.target` mengarah ke form yang sedang dikirim.
-- `.reset()` mengosongkan seluruh isian form.
-
-Kode ini hanya membuat simulasi pesan berhasil. Supaya benar-benar mengirim data, proyek memerlukan backend, API, layanan form, atau integrasi email.
+- `submit` berjalan ketika form dikirim.
+- `e.preventDefault()` mencegah halaman dimuat ulang.
+- `.value` mengambil nama.
+- `.trim()` menghapus spasi di awal dan akhir.
+- Template literal memasukkan nama ke dalam pesan.
+- `.textContent` menampilkan pesan.
+- `.reset()` mengosongkan form.
 
 ## 4. Tombol Kembali ke Atas
-
-```javascript
-const topBtn = document.getElementById('topBtn');
-```
-
-Kode tersebut mengambil tombol dengan `id="topBtn"` dari HTML.
 
 ```javascript
 window.addEventListener('scroll', () =>
@@ -720,10 +728,7 @@ window.addEventListener('scroll', () =>
 );
 ```
 
-- Event `scroll` dijalankan setiap kali halaman digulir.
-- `window.scrollY` menunjukkan jarak gulir vertikal dari bagian paling atas.
-- Jika jarak lebih dari 450 piksel, class `show` ditambahkan.
-- CSS `.top.show` kemudian menampilkan tombol.
+Tombol muncul setelah halaman digulir lebih dari 450 piksel.
 
 ```javascript
 topBtn.addEventListener('click', () =>
@@ -731,82 +736,71 @@ topBtn.addEventListener('click', () =>
 );
 ```
 
-Ketika tombol diklik, `window.scrollTo()` memindahkan halaman ke posisi `top: 0`. Nilai `behavior: 'smooth'` membuat perpindahan berlangsung halus.
+Ketika diklik, halaman kembali ke posisi paling atas secara halus.
 
-## Hubungan Elemen HTML dan JavaScript
+## Hubungan HTML dan JavaScript
 
-| Elemen HTML | Dipakai JavaScript untuk |
+| Elemen HTML | Fungsi JavaScript |
 | --- | --- |
-| `#menuBtn` | Mendeteksi klik tombol hamburger. |
-| `#navMenu` | Menampilkan atau menyembunyikan navigasi. |
-| `.filter` | Mendeteksi tombol kategori galeri yang dipilih. |
-| `#galleryGrid figure` | Menampilkan atau menyembunyikan foto galeri. |
-| `#contactForm` | Mendeteksi proses pengiriman form. |
+| `#menuBtn` | Membuka dan menutup menu ponsel. |
+| `#navMenu` | Menjadi menu yang ditampilkan atau disembunyikan. |
+| `.filter` | Menjadi tombol kategori galeri. |
+| `#galleryGrid figure` | Menjadi gambar yang disaring. |
+| `#contactForm` | Mendeteksi pengiriman form. |
 | `#name` | Mengambil nama pengguna. |
-| `#formResult` | Menampilkan pesan berhasil. |
-| `#topBtn` | Menampilkan tombol dan mengembalikan halaman ke atas. |
-
-## Alur Interaksi Pengguna
-
-1. Website dibuka dan browser membaca `index.html`.
-2. Browser mengambil `style.css` untuk menampilkan desain halaman.
-3. Browser menjalankan `script.js` untuk menambahkan interaksi.
-4. Pada ponsel, pengguna dapat membuka menu dengan tombol hamburger.
-5. Pengguna dapat memilih kategori untuk menyaring foto galeri.
-6. Pengguna dapat mengisi form dan menerima pesan konfirmasi demo.
-7. Setelah halaman digulir, tombol panah muncul untuk kembali ke bagian atas.
+| `#formResult` | Menampilkan pesan form. |
+| `#topBtn` | Menjadi tombol kembali ke atas. |
 
 ---
 
-# Catatan dan Kekurangan pada Kode Saat Ini
+# Kesesuaian dengan Ketentuan UAS
 
-## 1. Kesalahan Penulisan pada Bagian Foto Profil
+| Ketentuan | Implementasi | Status |
+| --- | --- | --- |
+| Tema edukasi | Website Madrasah Wihdatul Muslimat | Terpenuhi |
+| Paragraf | Tag `<p>` pada seluruh section | Terpenuhi |
+| Gambar | Logo, identitas, kegiatan, dan galeri | Terpenuhi |
+| Heading | `<h1>`, `<h2>`, dan `<h3>` | Terpenuhi |
+| Text formatting | `<b>`, `<strong>`, `<em>`, `<small>`, dan `<code>` | Terpenuhi |
+| Link | Link internal dan eksternal | Terpenuhi |
+| Tabel | Tabel ringkasan kurikulum | Terpenuhi |
+| List | Unordered list dan ordered list | Terpenuhi |
+| Form | Form nama, email, dan pesan | Terpenuhi sebagai demo |
+| Video | YouTube embed dan tag video HTML5 | Terpenuhi |
+| Audio | Pemutar audio HTML5 | Terpenuhi |
+| CSS | Custom external CSS | Terpenuhi |
+| JavaScript | Menu, filter, form demo, dan tombol atas | Terpenuhi |
+| Responsive design | Media query 900 px dan 560 px | Terpenuhi |
+| Elemen semantik | Header, nav, main, section, article, figure, dan footer | Terpenuhi |
 
-Pada `index.html` terdapat kode berikut:
+## Catatan Penting
 
-```html
-<class="photo-caption"
-```
+1. Folder `assets` harus ikut disimpan pada repository dan hosting agar gambar tampil.
+2. Video YouTube, video HTML5 eksternal, audio, dan Google Fonts memerlukan internet.
+3. Form masih berupa simulasi dan belum terhubung dengan database atau email.
+4. Nama file utama pada hosting harus tetap `index.html`.
+5. Nama file dan folder pada hosting sensitif terhadap huruf besar dan kecil.
 
-Penulisan tersebut tidak valid karena `class` adalah atribut, bukan nama tag HTML. Jika ingin membuat caption, bentuk yang benar dapat ditulis seperti berikut:
+## Cara Menjalankan Website
 
-```html
-<div class="photo-caption">
-  <b>Madrasah Wihdatul Muslimat</b>
-  <span>Menteng, Jakarta Pusat</span>
-</div>
-```
+1. Pastikan `index.html`, `style.css`, `script.js`, dan folder `assets` berada dalam satu folder.
+2. Buka folder menggunakan Visual Studio Code.
+3. Buka `index.html` melalui browser atau Live Server.
+4. Pastikan perangkat terhubung ke internet untuk memuat media eksternal.
+5. Uji menu, filter galeri, video, audio, form, dan tombol kembali ke atas.
 
-Jika caption memang tidak diperlukan, baris yang salah tersebut dapat dihapus.
+## Pengujian yang Disarankan
 
-## 2. Penutup `.container` pada Bagian Galeri
+- Klik seluruh menu navigasi.
+- Ubah ukuran browser untuk menguji tampilan responsif.
+- Buka menu hamburger pada layar kecil.
+- Pilih setiap kategori galeri.
+- Putar video YouTube.
+- Buka contoh video HTML5.
+- Putar audio.
+- Kirim form menggunakan nama dan email valid.
+- Gunakan tombol panah untuk kembali ke atas.
 
-Bagian galeri membuka elemen `.container`, tetapi sebelum `</section>` hanya terlihat satu `</div>` untuk menutup `.gallery-grid`. Sebaiknya tambahkan satu penutup lagi untuk `.container` seperti berikut:
+## Kesimpulan
 
-```html
-    </div> <!-- menutup gallery-grid -->
-  </div>   <!-- menutup container -->
-</section>
-```
-
-Browser kadang mencoba memperbaiki struktur HTML yang tidak lengkap secara otomatis, tetapi hasil tampilannya dapat berbeda pada browser tertentu.
-
-## 3. Form Belum Mengirim Data
-
-Form hanya menampilkan pesan sukses melalui JavaScript. Nama, email, dan pesan tidak disimpan. Untuk membuat form benar-benar bekerja, diperlukan proses tambahan menggunakan backend atau layanan penyimpanan data.
-
-## 4. Gambar Harus Berada pada Lokasi yang Tepat
-
-Semua atribut `src` menggunakan jalur seperti `assets/kegiatan-1.jpeg`. Jika nama file, huruf besar-kecil, atau lokasi gambarnya berbeda, gambar tidak akan tampil.
-
-## 5. Menu Dapat Menyimpan Inline Style Setelah Ukuran Layar Berubah
-
-JavaScript mengubah `display` navigasi melalui inline style. Jika menu ditutup pada layar kecil lalu browser langsung diperbesar, nilai `display: none` dapat tetap menempel. Hal ini tidak terlalu terasa pada penggunaan biasa, tetapi dapat diperbaiki dengan mengatur ulang style ketika ukuran jendela berubah.
-
----
-
-# Kesimpulan
-
-Website Madrasah Wihdatul Muslimat menggabungkan tiga bagian utama pengembangan web. HTML dipakai untuk membuat struktur dan isi, CSS dipakai untuk membuat desain yang responsif, sedangkan JavaScript dipakai untuk membuat halaman menjadi interaktif. Melalui proyek ini, mahasiswa dapat mempelajari penggunaan elemen semantik HTML, Flexbox, CSS Grid, media query, manipulasi DOM, event, dan pengolahan class menggunakan JavaScript.
-
-Walaupun website sudah dapat menampilkan informasi dan interaksi dasar, form kontak masih bersifat demo dan terdapat dua bagian struktur HTML yang perlu diperbaiki sebelum website dipublikasikan atau dikumpulkan sebagai hasil akhir.
+Website ini menerapkan materi dasar Pemrograman Web I mulai dari struktur HTML sampai penggunaan CSS selector. HTML menyusun konten, CSS memperindah dan membuat tampilan responsif, sedangkan JavaScript memberikan interaksi. Komponen paragraf, gambar, heading, text formatting, link, tabel, list, form, video, audio, elemen semantik, CSS, dan JavaScript sudah digabungkan menjadi satu website edukasi yang dapat dijalankan melalui browser dan dipublikasikan melalui hosting.
