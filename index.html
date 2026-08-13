@@ -1,25 +1,32 @@
 <!DOCTYPE html>
+<!--
+============================================================
+UAS PEMROGRAMAN WEB I
+============================================================
+-->
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Website edukasi Madrasah Diniyah Takmiliyah Wihdatul Muslimat, Menteng, Jakarta Pusat.">
-  <title>Madrasah Wihdatul Muslimat | Portal Edukasi</title>
+  <title>Madrasah Wihdatul Muslimat</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-version="uas">
+<!-- Header dan navigasi utama website -->
 <header class="header">
   <div class="container nav">
     <a class="brand" href="#beranda">
       <img src="assets/logo-madrasah.jpg" alt="Logo Madrasah Wihdatul Muslimat">
       <span><b>WIHDATUL MUSLIMAT</b><small>Madrasah Diniyah Takmiliyah</small></span>
     </a>
-    <button class="menu" id="menuBtn" aria-label="Buka menu">☰</button>
+    <button class="menu" id="menuBtn" type="button" aria-label="Buka menu">☰</button>
     <nav id="navMenu">
       <a href="#beranda">Beranda</a>
       <a href="#profil">Profil</a>
       <a href="#kurikulum">Kurikulum</a>
       <a href="#wawasan">Wawasan</a>
+      <a href="#media">Media</a>
       <a href="#kegiatan">Kegiatan</a>
       <a href="#galeri">Galeri</a>
       <a href="#kontak">Kontak</a>
@@ -28,6 +35,7 @@
 </header>
 
 <main>
+<!-- Bagian beranda atau hero -->
 <section id="beranda" class="hero">
   <div class="hero-bg"></div><div class="hero-shade"></div>
   <div class="container hero-content">
@@ -49,6 +57,7 @@
   <div class="scroll-hint">Gulir untuk mengenal madrasah ↓</div>
 </section>
 
+<!-- Bagian profil madrasah -->
 <section id="profil" class="section">
   <div class="container profile-grid">
     <div>
@@ -65,11 +74,11 @@
     </div>
     <div class="profile-photo">
       <img src="assets/identitas.jpg" alt="Papan identitas Madrasah Diniyah Takmiliyah Wihdatul Muslimat">
-      <class="photo-caption"
     </div>
   </div>
 </section>
 
+<!-- Bagian kurikulum, list, dan tabel pembelajaran -->
 <section id="kurikulum" class="section soft">
   <div class="container">
     <div class="section-head">
@@ -82,13 +91,61 @@
       <article class="subject"><span>03</span><div><h3>Bahasa Arab</h3><p>Mengenal kosakata dan dasar Bahasa Arab untuk mendukung pemahaman terhadap literatur keislaman.</p></div></article>
       <article class="subject"><span>04</span><div><h3>Fiqih</h3><p>Belajar dasar-dasar ibadah dan penerapannya dalam kehidupan sehari-hari.</p></div></article>
       <article class="subject"><span>05</span><div><h3>Hadist</h3><p>Mengenal hadist dan nilai keteladanan Rasulullah sebagai pedoman dalam berperilaku.</p></div></article>
-      <article class="subject"><span>06</span><div><h3>Sejarah Kebudayaan Islam</h3><p>Mengenal perjalanan sejarah Islam dan mengambil pelajaran dari tokoh serta peristiwa penting.</p></div></article>
-      <article class="subject featured"><span>07</span><div><h3>Tauhid</h3><p>Memahami dasar pengesaan Allah dan menumbuhkan keyakinan yang menjadi landasan kehidupan seorang muslim.</p></div></article>
+      <article class="subject"><span>06</span><div><h3>Tauhid</h3><p>Memahami dasar pengesaan Allah dan menumbuhkan keyakinan yang menjadi landasan kehidupan seorang muslim.</p></div></article>
     </div>
     <div class="curriculum-note"><b>Catatan:</b> daftar mata pelajaran di atas mengikuti informasi kurikulum yang diberikan untuk website madrasah ini. Secara umum, PMA No. 13 Tahun 2014 menyebut Al-Qur'an, Al-Hadits, Fiqih, Akhlak, Sejarah Kebudayaan Islam, dan Bahasa Arab sebagai mata pelajaran minimal MDT. <a href="https://jdih.kemenag.go.id/regulation-download/peraturan-menteri-agama-nomor-13-tahun-2014-tentang-pendidikan-keagamaan-islam" target="_blank" rel="noopener">Baca rujukan Kemenag</a></div>
+
+    <!-- ========== KOMPONEN UAS 1: UNORDERED LIST DAN ORDERED LIST ========== -->
+    <div class="curriculum-tools">
+      <article class="learning-list">
+        <h3>Hasil Pembelajaran yang Diharapkan</h3>
+        <ul>
+          <li>Terbiasa membaca dan mempelajari Al-Qur'an.</li>
+          <li>Memahami dasar keimanan dan pelaksanaan ibadah.</li>
+          <li>Menerapkan akhlak baik dalam kehidupan sehari-hari.</li>
+          <li>Mengenal dasar Bahasa Arab dan sejarah kebudayaan Islam.</li>
+        </ul>
+      </article>
+      <article class="learning-list">
+        <h3>Contoh Alur Kegiatan Belajar</h3>
+        <ol>
+          <li>Kegiatan pembukaan dan doa bersama.</li>
+          <li>Penyampaian materi oleh guru.</li>
+          <li>Latihan membaca, berdiskusi, atau praktik ibadah.</li>
+          <li>Pengulangan materi dan penutup.</li>
+        </ol>
+      </article>
+    </div>
+
+    <!-- ========== KOMPONEN UAS 2: TABEL HTML ========== -->
+    <div class="table-card">
+      <h3>Ringkasan Kurikulum Madrasah</h3>
+      <p>Informasi berikut disusun kembali dari bidang pembelajaran yang ditampilkan pada website.</p>
+      <div class="table-scroll">
+        <table class="curriculum-table">
+          <caption>Daftar bidang pembelajaran dan fokus materi</caption>
+          <thead>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Bidang Pembelajaran</th>
+              <th scope="col">Fokus Materi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Al-Qur'an</td><td>Membaca dan memahami dasar-dasar Al-Qur'an.</td></tr>
+            <tr><td>2</td><td>Aqidah Akhlak</td><td>Keimanan dan pembiasaan perilaku terpuji.</td></tr>
+            <tr><td>3</td><td>Bahasa Arab</td><td>Kosakata dan dasar Bahasa Arab.</td></tr>
+            <tr><td>4</td><td>Fiqih</td><td>Dasar ibadah dan penerapannya.</td></tr>
+            <tr><td>5</td><td>Hadist</td><td>Hadist dan keteladanan Rasulullah.</td></tr>
+            <tr><td>6</td><td>Tauhid</td><td>Dasar pengesaan Allah dan penguatan keyakinan.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Bagian wawasan edukasi -->
 <section id="wawasan" class="section insight">
   <div class="container">
     <div class="section-head"><div><span class="eyebrow">WAWASAN EDUKASI</span><h2>Mengapa belajar agama penting bagi anak sekarang?</h2></div></div>
@@ -104,7 +161,7 @@
         <article><b>03 ·  Menjaga Kesehatan Mental dan Ketahanan Diri (Resilience)</b><p>Tingkat stres, kecemasan, dan tekanan sosial pada anak-anak/remaja modern cukup tinggi. Pembelajaran agama memberikan dasar spiritual yang kuat, mengajarkan mereka untuk:
 ​Selalu bersyukur atas apa yang dimiliki.
 ​Memiliki tempat bersandar dan berdoa saat menghadapi kesulitan.
-​Tidak mudah putus asa (patience & resilience) saat menghadapi kegagalan.</p></article>
+​Tidak mudah putus asa (patience &amp; resilience) saat menghadapi kegagalan.</p></article>
         <article><b>04 · Menumbuhkan kecerdasan spiritual</b><p>Pendidikan anak perlu memperhatikan pengetahuan, karakter, hubungan sosial, dan dimensi spiritual. Kemenag DKI juga menekankan pentingnya kecerdasan intelektual, emosional, spiritual, dan ketahanan diri dalam penguatan pendidikan MDT. <a href="https://dki.kemenag.go.id/berita/kabid-pakis-wisuda-mdt-perkuat-karakter-generasi-emas-bangsa-OruYh" target="_blank" rel="noopener">Baca selengkapnya</a></p></article>
       </div>
     </div>
@@ -112,6 +169,43 @@
   </div>
 </section>
 
+<!-- ========== BAGIAN MEDIA HTML5 ========== -->
+<section id="media" class="section media-section">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">MEDIA PEMBELAJARAN</span><h2>Belajar melalui video dan audio</h2></div>
+      <p>Video dan audio merupakan contoh media pendukung yang dapat membuat proses pembelajaran lebih menarik dan mudah dipahami.</p>
+    </div>
+
+    <div class="media-grid">
+      <article class="media-card">
+        <h3>Contoh Video Pembelajaran: Keindahan Alam</h3>
+        <p>Video dapat digunakan untuk mengajak peserta didik mengamati ciptaan Allah dan mengenal lingkungan melalui media visual.</p>
+        <!-- ========== KOMPONEN UAS 3: VIDEO EKSTERNAL ========== -->
+        <video class="media-player" controls preload="metadata" poster="assets/kegiatan-16.jpeg">
+          <source src="https://developer.mozilla.org/shared-assets/videos/flower.mp4" type="video/mp4">
+          Browser Anda tidak mendukung video HTML5.
+          <a href="https://developer.mozilla.org/shared-assets/videos/flower.mp4" target="_blank" rel="noopener">Buka video secara langsung</a>.
+        </video>
+        </article>
+
+      <article class="media-card">
+        <h3>Contoh Audio Pembelajaran: Mengenal Media Suara</h3>
+        <p>Audio dapat digunakan untuk mengajak peserta didik mengenali suara melalui media audio.</p>
+        <!-- ========== KOMPONEN UAS 4: AUDIO Internal ========== -->
+        <audio class="audio-player" controls preload="metadata">
+          <source src="assets/music.mp3" type="audio/mpeg">
+          Browser Anda tidak mendukung audio HTML5.
+          <a href="assets/music.mp3.mp3" target="_blank" rel="noopener">Buka audio secara langsung</a>.
+        </audio>
+        <p class="media-credit">Audio tidak diputar otomatis agar pengunjung tetap memiliki kendali atas suara.</p>
+    
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Bagian aktivitas santri -->
 <section id="kegiatan" class="section soft">
   <div class="container">
     <div class="section-head"><div><span class="eyebrow">AKTIVITAS SANTRI</span><h2>Ruang Belajar Tanpa Batas</h2></div><p>Kami memfasilitasi santri untuk menimba ilmu agama tidak hanya melalui pembelajaran teori di kelas, tetapi juga lewat aktivitas dinamis yang mengasah akhlak dan wawasan.</p></div>
@@ -124,16 +218,17 @@
   </div>
 </section>
 
+<!-- Bagian galeri dengan filter JavaScript -->
 <section id="galeri" class="section gallery-section">
   <div class="container">
-    <div class="section-head"><div><span class="eyebrow">GALERI MADRASAH</span><h2>Kegiatan Santri & Santriwati Wihdatul Muslimat</h2></div></div>
+    <div class="section-head"><div><span class="eyebrow">GALERI MADRASAH</span><h2>Kegiatan Santri &amp; Santriwati Wihdatul Muslimat</h2></div></div>
     <div class="filters" id="filters">
-      <button class="filter active" data-filter="all">Semua</button>
-      <button class="filter" data-filter="rihlah">Rihlah</button>
-      <button class="filter" data-filter="pesantren">Pesantren Kilat</button>
-      <button class="filter" data-filter="kbm">KBM</button>
-      <button class="filter" data-filter="jumat">Jumat Berkah</button>
-      <button class="filter" data-filter="Madrasah">Madrasah</button>
+      <button class="filter active" type="button" data-filter="all">Semua</button>
+      <button class="filter" type="button" data-filter="rihlah">Rihlah</button>
+      <button class="filter" type="button" data-filter="pesantren">Pesantren Kilat</button>
+      <button class="filter" type="button" data-filter="kbm">KBM</button>
+      <button class="filter" type="button" data-filter="jumat">Jumat Berkah</button>
+      <button class="filter" type="button" data-filter="madrasah">Madrasah</button>
     </div>
     <div class="gallery-grid" id="galleryGrid">
       <figure data-cat="rihlah"><img src="assets/kegiatan-16.jpeg" alt="Rihlah bersama peserta didik"><figcaption>Rihlah — kebersamaan peserta didik</figcaption></figure>
@@ -150,12 +245,13 @@
       <figure data-cat="kbm"><img src="assets/kegiatan-7.jpeg" alt="Kegiatan belajar"><figcaption>KBM — bimbingan guru</figcaption></figure>
       <figure data-cat="kbm"><img src="assets/kegiatan-5.jpeg" alt="Kegiatan kelas"><figcaption>KBM — belajar bersama</figcaption></figure>
       <figure data-cat="kbm"><img src="assets/kegiatan-4.jpeg" alt="Kegiatan kelas"><figcaption>KBM — pembelajaran di madrasah</figcaption></figure>
-      <figure data-cat="Madrasah"><img src="assets/kegiatan-13.jpeg" alt="Kegiatan kebersamaan"><figcaption>Gedung Madrasah</figcaption></figure>
+      <figure data-cat="madrasah"><img src="assets/kegiatan-13.jpeg" alt="Kegiatan kebersamaan"><figcaption>Gedung Madrasah</figcaption></figure>
       <figure data-cat="jumat"><img src="assets/kegiatan-17.jpeg" alt="Jumat Berkah"><figcaption>Jumat Berkah — berbagi bersama</figcaption></figure>
-      <figure data-cat="Madrasah"><img src="assets/kegiatan-2.jpeg" alt="Kegiatan kebersamaan"><figcaption>Madrasah</figcaption></figure>
+      </div>
   </div>
 </section>
 
+<!-- Ajakan mengikuti media sosial madrasah -->
 <section class="cta-section">
   <div class="container cta-box">
     <div><span class="eyebrow light">MEDIA EDUKASI</span><h2>Belajar agama adalah bekal untuk menjalani kehidupan.</h2><p>Mari membangun kebiasaan belajar, beribadah, dan berakhlak baik sejak dini.</p></div>
@@ -163,6 +259,7 @@
   </div>
 </section>
 
+<!-- Bagian kontak dan form pertanyaan -->
 <section id="kontak" class="section contact">
   <div class="container contact-grid">
     <div>
@@ -175,11 +272,11 @@
         <div><b>Instagram</b><span><a href="https://www.instagram.com/ywihdatul.muslimat/" target="_blank" rel="noopener">@ywihdatul.muslimat</a></span></div>
       </div>
     </div>
-    <form class="contact-form" id="contactForm">
+    <form class="contact-form" id="contactForm" action="#" method="post">
       <h3>Kirim Pertanyaan</h3><p>Form Madrasah Wihdatul Muslimat.</p>
-      <label>Nama<input id="name" required placeholder="Nama lengkap"></label>
-      <label>Email<input id="email" type="email" required placeholder="nama@email.com"></label>
-      <label>Pesan<textarea id="message" rows="5" required placeholder="Tulis pertanyaan atau pesan..."></textarea></label>
+      <label>Nama<input id="name" name="name" type="text" required placeholder="Nama lengkap"></label>
+      <label>Email<input id="email" name="email" type="email" required placeholder="nama@email.com"></label>
+      <label>Pesan<textarea id="message" name="message" rows="5" required placeholder="Tulis pertanyaan atau pesan..."></textarea></label>
       <button class="btn green" type="submit">Kirim Pesan</button>
       <div class="form-result" id="formResult"></div>
     </form>
@@ -187,8 +284,11 @@
 </section>
 </main>
 
+<!-- Footer dan tombol kembali ke bagian atas -->
 <footer><div class="container footer-grid"><div><b>Madrasah Diniyah Takmiliyah Wihdatul Muslimat</b><span>Menteng, Jakarta Pusat · Berdiri sejak 2015</span></div><a href="https://www.instagram.com/ywihdatul.muslimat/" target="_blank" rel="noopener">Instagram @ywihdatul.muslimat ↗</a></div></footer>
-<button class="top" id="topBtn">↑</button>
+<button class="top" id="topBtn" type="button" aria-label="Kembali ke atas">↑</button>
+<!-- JavaScript diletakkan di akhir agar elemen HTML sudah dimuat -->
 <script src="script.js"></script>
 </body>
 </html>
+
